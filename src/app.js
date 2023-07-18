@@ -53,7 +53,7 @@ router.post("/api/v1/product", (req, res) => {
         `${__dirname}/../dev-data/product.json`,
         JSON.stringify(product),
         (err) => {
-          res.json({
+          res.status(201).json({
             status: "Success",
 
             data: {
